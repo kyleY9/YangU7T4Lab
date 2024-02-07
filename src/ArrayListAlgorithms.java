@@ -75,9 +75,14 @@ public class ArrayListAlgorithms {
      *  @return  the index at which the minimum value occurs
      */
     public static int indexOfMinimum(ArrayList<Integer> intList) {
-        int minIdx = Integer.MAX_VALUE;
+        int minValue = Integer.MAX_VALUE;
+        int minIdx = 0;
         for (int i = 0; i < intList.size(); i++) {
-
+            if (intList.get(i) < minValue) {
+                minValue = intList.get(i);
+                minIdx = i;
+            }
         }
+        return minIdx;
     }
 }
